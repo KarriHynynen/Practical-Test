@@ -1,0 +1,42 @@
+<!-- This is the header for Register page. It has a previous page button added in it to get back to login page.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Create Account
+    </ion-title>
+  </ion-navbar>
+  <ion-buttons >
+    <button ion-button left class="loginnavbtn" (click)="goback()">
+      Previous Page
+    </button>
+   
+    </ion-buttons>
+
+</ion-header>
+
+<!-- This part is made for registering to the application by adding username and password for user's account
+-->
+<ion-content padding>
+  
+  <ion-list>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" #username></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" #password></ion-input>
+  </ion-item>
+  
+</ion-list>
+
+<!-- The register button activates the registering
+-->
+<div padding>
+  <button block ion-button (click)="registerUser()" item-left>Register</button>
+</div>
+
+</ion-content>

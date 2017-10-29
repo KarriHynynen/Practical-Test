@@ -1,0 +1,41 @@
+<!-- For the loginpage I wanted to have an icon or image on top of the login screen
+-->
+
+<ion-content class="login-content" padding>
+    <ion-row class="logo-row">
+      <ion-col></ion-col>
+      <ion-col width-67>
+        <img src="https://www.vpul.upenn.edu/careerservices/files/CV_graphic_resize.jpeg"/>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <!-- This is where I made the login box where people type their login information, username up top and password underneath
+-->
+    <div class="login-box">
+        
+      <ion-list>
+  
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" #password></ion-input>
+    </ion-item>
+    
+      </ion-list>
+      
+        <ion-row>
+          <!-- This is the part where people click either to sign in with their correct information or register to make an account for the page to login later on.
+-->
+          <ion-col class="signup-col">
+        <button ion-button (click)="signInUser()" item-left>Sign In</button>
+        <button ion-button (click)="createAccount()" item-left>Register</button>
+          </ion-col>
+        </ion-row>
+        
+      
+    </div>
+  </ion-content>
