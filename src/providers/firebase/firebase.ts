@@ -17,25 +17,14 @@ export class FirebaseProvider {
  
   constructor(public afd: AngularFireDatabase) { }
  
-  getShoppingItems() {
-    return this.afd.list('/shoppingItems/');
-  }
- 
-  addItem(name) {
-    this.afd.list('/shoppingItems/').push(name);
-  }
- 
-  removeItem(id) {
-    this.afd.list('/shoppingItems/').remove(id);
-  }
   public login(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return FirebaseListObservable.throw("Please insert credentials");
     } else {
       return FirebaseListObservable.create(observer => {
         // At this point make a request to your backend to make a real check!
-        let access = (credentials.password === "admin" && credentials.email === "admin");
-        this.currentUser = new User('Karri', 'karri@apptastic.com');
+        let access = (credentials.password === "" && credentials.email === "");
+        this.currentUser = new User('', '');
         observer.next(access);
         observer.complete();
       });
