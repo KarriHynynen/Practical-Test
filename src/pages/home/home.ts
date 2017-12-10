@@ -1,6 +1,8 @@
 import { FirebaseProvider } from './../../providers/firebase/firebase';
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, Nav } from 'ionic-angular';
+
+
 
 @IonicPage()
 @Component({
@@ -9,7 +11,7 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class HomePage {
  
-  constructor(public navCtrl: NavController, public firebaseProvider: FirebaseProvider) {
+  constructor(public navCtrl: NavController, public firebaseProvider: FirebaseProvider, public nav: Nav) {
   }
  
   ionViewDidLoad() {

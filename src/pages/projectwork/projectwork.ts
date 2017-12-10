@@ -15,5 +15,4 @@ export class ProjectworkPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProjectworkPage');
   }
-
 }

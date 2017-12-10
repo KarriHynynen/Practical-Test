@@ -14,5 +14,4 @@ export class ExtraPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExtraPage');
   }
-
 }
